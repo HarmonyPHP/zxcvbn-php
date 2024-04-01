@@ -241,12 +241,12 @@ class SpatialTest extends AbstractMatchTest
         $feedback = $match->getFeedback(true);
 
         $this->assertSame(
-            'Straight rows of keys are easy to guess',
+            'Straight rows of keys are easy to guess.',
             $feedback['warning'],
             "spatial match in straight line gives correct warning"
         );
         $this->assertContains(
-            'Use a longer keyboard pattern with more turns',
+            'Use a longer keyboard pattern with more turns.',
             $feedback['suggestions'],
             "spatial match in straight line gives correct suggestion"
         );
@@ -263,12 +263,12 @@ class SpatialTest extends AbstractMatchTest
         $feedback = $match->getFeedback(true);
 
         $this->assertSame(
-            'Short keyboard patterns are easy to guess',
+            'Short keyboard patterns are easy to guess.',
             $feedback['warning'],
             "spatial match with turns gives correct warning"
         );
         $this->assertContains(
-            'Use a longer keyboard pattern with more turns',
+            'Use a longer keyboard pattern with more turns.',
             $feedback['suggestions'],
             "spatial match with turns gives correct suggestion"
         );

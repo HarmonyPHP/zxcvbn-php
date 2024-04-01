@@ -304,12 +304,12 @@ class DateTest extends AbstractMatchTest
         $feedback = $match->getFeedback(true);
 
         $this->assertSame(
-            'Dates are often easy to guess',
+            'Dates are often easy to guess.',
             $feedback['warning'],
             "date match gives correct warning"
         );
         $this->assertContains(
-            'Avoid dates and years that are associated with you',
+            'Avoid dates and years that are associated with you.',
             $feedback['suggestions'],
             "date match gives correct suggestion"
         );

@@ -277,7 +277,7 @@ class DictionaryTest extends AbstractMatchTest
     {
         $feedback = $this->getFeedbackForToken('password', 'passwords', 2, true);
         $this->assertSame(
-            'This is a top-10 common password',
+            'This is a top-10 common password.',
             $feedback['warning'],
             "dictionary match warns about top-10 password"
         );
@@ -287,7 +287,7 @@ class DictionaryTest extends AbstractMatchTest
     {
         $feedback = $this->getFeedbackForToken('hunter', 'passwords', 37, true);
         $this->assertSame(
-            'This is a top-100 common password',
+            'This is a top-100 common password.',
             $feedback['warning'],
             "dictionary match warns about top-100 password"
         );
@@ -297,7 +297,7 @@ class DictionaryTest extends AbstractMatchTest
     {
         $feedback = $this->getFeedbackForToken('mytruck', 'passwords', 19324, true);
         $this->assertSame(
-            'This is a very common password',
+            'This is a very common password.',
             $feedback['warning'],
             "dictionary match warns about common password"
         );
@@ -307,7 +307,7 @@ class DictionaryTest extends AbstractMatchTest
     {
         $feedback = $this->getFeedbackForToken('browndog', 'passwords', 7014, false);
         $this->assertSame(
-            'This is similar to a commonly used password',
+            'This is similar to a commonly used password.',
             $feedback['warning'],
             "dictionary match warns about common password (not a sole match)"
         );
@@ -327,7 +327,7 @@ class DictionaryTest extends AbstractMatchTest
     {
         $feedback = $this->getFeedbackForToken('university', 'english_wikipedia', 69, true);
         $this->assertSame(
-            'A word by itself is easy to guess',
+            'A word by itself is easy to guess.',
             $feedback['warning'],
             "dictionary match warns about Wikipedia word (sole match)"
         );
@@ -347,7 +347,7 @@ class DictionaryTest extends AbstractMatchTest
     {
         $feedback = $this->getFeedbackForToken('rodriguez', 'surnames', 21, true);
         $this->assertSame(
-            'Names and surnames by themselves are easy to guess',
+            'Names and surnames by themselves are easy to guess.',
             $feedback['warning'],
             "dictionary match warns about surname (sole match)"
         );
@@ -357,7 +357,7 @@ class DictionaryTest extends AbstractMatchTest
     {
         $feedback = $this->getFeedbackForToken('rodriguez', 'surnames', 21, false);
         $this->assertSame(
-            'Common names and surnames are easy to guess',
+            'Common names and surnames are easy to guess.',
             $feedback['warning'],
             "dictionary match warns about surname (not a sole match)"
         );
@@ -377,7 +377,7 @@ class DictionaryTest extends AbstractMatchTest
     {
         $feedback = $this->getFeedbackForToken('PASSWORD', 'passwords', 2, true);
         $this->assertContains(
-            'All-uppercase is almost as easy to guess as all-lowercase',
+            'All-uppercase is almost as easy to guess as all-lowercase.',
             $feedback['suggestions'],
             "dictionary match gives suggestion for all-uppercase word"
         );
@@ -387,7 +387,7 @@ class DictionaryTest extends AbstractMatchTest
     {
         $feedback = $this->getFeedbackForToken('Password', 'passwords', 2, true);
         $this->assertContains(
-            'Capitalization doesn\'t help very much',
+            'Capitalization doesn\'t help very much.',
             $feedback['suggestions'],
             "dictionary match gives suggestion for word starting with uppercase"
         );

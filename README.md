@@ -2,23 +2,18 @@ Zxcvbn-PHP is a password strength estimator using pattern matching and minimum e
 
 >zxcvbn attempts to give sound password advice through pattern matching and conservative entropy calculations. It finds 10k common passwords, common American names and surnames, common English words, and common patterns like dates, repeats (aaa), sequences (abcd), and QWERTY patterns.
 
-[![Build Status](https://travis-ci.org/bjeavons/zxcvbn-php.png?branch=master)](https://travis-ci.org/bjeavons/zxcvbn-php)
-[![Coverage Status](https://coveralls.io/repos/github/bjeavons/zxcvbn-php/badge.svg?branch=master)](https://coveralls.io/github/bjeavons/zxcvbn-php?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/bjeavons/zxcvbn-php/v/stable)](https://packagist.org/packages/bjeavons/zxcvbn-php)
-[![License](https://poser.pugx.org/bjeavons/zxcvbn-php/license)](https://packagist.org/packages/bjeavons/zxcvbn-php)
-
 ## Installation
 
 The library can be installed with [Composer](http://getcomposer.org) by adding it as a dependency to your composer.json file.
 
 Via the command line run:
-`composer require bjeavons/zxcvbn-php`
+`composer require harmonyphp/zxcvbn-php`
 
 Or in your composer.json add
 ```json
 {
     "require": {
-        "bjeavons/zxcvbn-php": "^1.0"
+        "harmonyphp/zxcvbn-php": "^1.0"
     }
 }
 ```
@@ -48,7 +43,7 @@ $strong = $zxcvbn->passwordStrength('correct horse battery staple');
 echo $strong['score']; // will print 4
 
 echo $weak['feedback']['warning']; // will print user-facing feedback on the password, set only when score <= 2
-// $weak['feedback']['suggestions'] may contain user-facing suggestions to improve the score
+echo $weak['feedback']['suggestions'] //may contain user-facing suggestions to improve the score
 ```
 
 Scores are integers from 0 to 4:
@@ -60,6 +55,7 @@ Scores are integers from 0 to 4:
 
 ### Acknowledgements
 Thanks to:
+* @bjeavons for the port [PHP Zxcvbn](https://github.com/bjeavons/zxcvbn-php)
 * @lowe for the original [Javascript Zxcvbn](https://github.com/lowe/zxcvbn)
 * [@Dreyer's port](https://github.com/Dreyer/php-zxcvbn) for reference for initial implementation
 * [@mkopinsky](https://github.com/mkopinsky) for major updates to keep in sync with upstream scoring

@@ -26,12 +26,12 @@ class FeedbackTest extends TestCase
 
         $this->assertSame('', $feedback['warning'], "default warning");
         $this->assertContains(
-            'Use a few words, avoid common phrases',
+            'Use a few words, avoid common phrases.',
             $feedback['suggestions'],
             "default suggestion #1"
         );
         $this->assertContains(
-            'No need for symbols, digits, or uppercase letters',
+            'No need for symbols, digits, or uppercase letters.',
             $feedback['suggestions'],
             "default suggestion #1"
         );
@@ -58,17 +58,17 @@ class FeedbackTest extends TestCase
         $feedback = $this->feedback->getFeedback(1, [$match1, $match2]);
 
         $this->assertSame(
-            'Dates are often easy to guess',
+            'Dates are often easy to guess.',
             $feedback['warning'],
             "warning provided for the longest match"
         );
         $this->assertContains(
-            'Avoid dates and years that are associated with you',
+            'Avoid dates and years that are associated with you.',
             $feedback['suggestions'],
             "suggestion provided for the longest match"
         );
         $this->assertNotContains(
-            'Avoid sequences',
+            'Avoid sequences.',
             $feedback['suggestions'],
             "no suggestion provided for the shorter match"
         );

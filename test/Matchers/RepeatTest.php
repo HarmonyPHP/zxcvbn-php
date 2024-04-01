@@ -284,12 +284,12 @@ class RepeatTest extends AbstractMatchTest
         $feedback = $match->getFeedback(true);
 
         $this->assertSame(
-            'Repeats like "aaa" are easy to guess',
+            'Repeats like "aaa" are easy to guess.',
             $feedback['warning'],
             "one repeated character gives correct warning"
         );
         $this->assertContains(
-            'Avoid repeated words and characters',
+            'Avoid repeated words and characters.',
             $feedback['suggestions'],
             "one repeated character gives correct suggestion"
         );
@@ -305,12 +305,12 @@ class RepeatTest extends AbstractMatchTest
         $feedback = $match->getFeedback(true);
 
         $this->assertSame(
-            'Repeats like "abcabcabc" are only slightly harder to guess than "abc"',
+            'Repeats like "abcabcabc" are only slightly harder to guess than "abc".',
             $feedback['warning'],
             "multiple repeated characters gives correct warning"
         );
         $this->assertContains(
-            'Avoid repeated words and characters',
+            'Avoid repeated words and characters.',
             $feedback['suggestions'],
             "multiple repeated characters gives correct suggestion"
         );

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace ZxcvbnPhp\Math;
 
+use LogicException;
 use ZxcvbnPhp\Math\Impl\BinomialProviderPhp73Gmp;
 use ZxcvbnPhp\Math\Impl\BinomialProviderFloat64;
 use ZxcvbnPhp\Math\Impl\BinomialProviderInt64;
@@ -14,7 +15,7 @@ class Binomial
 
     private function __construct()
     {
-        throw new \LogicException(__CLASS__ . " is static");
+        throw new LogicException(__CLASS__ . " is static");
     }
 
     /**
@@ -60,7 +61,7 @@ class Binomial
         $providerClasses = self::getUsableProviderClasses();
 
         if (!$providerClasses) {
-            throw new \LogicException("No valid providers");
+            throw new LogicException("No valid providers");
         }
 
         $bestProviderClass = reset($providerClasses);

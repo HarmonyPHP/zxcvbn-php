@@ -33,10 +33,10 @@ class Zxcvbn
 
     public function __construct()
     {
-        $this->matcher = new \ZxcvbnPhp\Matcher();
-        $this->scorer = new \ZxcvbnPhp\Scorer();
-        $this->timeEstimator = new \ZxcvbnPhp\TimeEstimator();
-        $this->feedback = new \ZxcvbnPhp\Feedback();
+        $this->matcher = new Matcher();
+        $this->scorer = new Scorer();
+        $this->timeEstimator = new TimeEstimator();
+        $this->feedback = new Feedback();
     }
 
     public function addMatcher(string $className): self

@@ -349,12 +349,12 @@ class L33tTest extends AbstractMatchTest
         $feedback = $match->getFeedback(true);
 
         $this->assertSame(
-            'A word by itself is easy to guess',
+            'A word by itself is easy to guess.',
             $feedback['warning'],
             "l33t match didn't lose the original dictionary match warning"
         );
         $this->assertContains(
-            'Predictable substitutions like \'@\' instead of \'a\' don\'t help very much',
+            'Predictable substitutions like \'@\' instead of \'a\' don\'t help very much.',
             $feedback['suggestions'],
             "l33t match gives correct suggestion"
         );
@@ -371,7 +371,7 @@ class L33tTest extends AbstractMatchTest
         $feedback = $match->getFeedback(true);
 
         $this->assertSame(
-            'This is similar to a commonly used password',
+            'This is similar to a commonly used password.',
             $feedback['warning'],
             "l33t match doesn't give top-100 warning"
         );

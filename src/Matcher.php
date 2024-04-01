@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace ZxcvbnPhp;
 
+use InvalidArgumentException;
 use ZxcvbnPhp\Matchers\BaseMatch;
 use ZxcvbnPhp\Matchers\MatchInterface;
 
@@ -53,7 +54,7 @@ class Matcher
     public function addMatcher(string $className): self
     {
         if (!is_a($className, MatchInterface::class, true)) {
-            throw new \InvalidArgumentException(sprintf('Matcher class must implement %s', MatchInterface::class));
+            throw new InvalidArgumentException(sprintf('Matcher class must implement %s', MatchInterface::class));
         }
 
         $this->additionalMatchers[$className] = $className;

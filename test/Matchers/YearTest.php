@@ -141,17 +141,17 @@ class YearTest extends AbstractMatchTest
         $feedback = $match->getFeedback(true);
 
         $this->assertSame(
-            'Recent years are easy to guess',
+            'Recent years are easy to guess.',
             $feedback['warning'],
             "year match gives correct warning"
         );
         $this->assertContains(
-            'Avoid recent years',
+            'Avoid recent years.',
             $feedback['suggestions'],
             "year match gives correct suggestion #1"
         );
         $this->assertContains(
-            'Avoid years that are associated with you',
+            'Avoid years that are associated with you.',
             $feedback['suggestions'],
             "year match gives correct suggestion #2"
         );

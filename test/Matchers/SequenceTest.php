@@ -198,12 +198,12 @@ class SequenceTest extends AbstractMatchTest
         $feedback = $match->getFeedback(true);
 
         $this->assertSame(
-            'Sequences like abc or 6543 are easy to guess',
+            'Sequences like abc or 6543 are easy to guess.',
             $feedback['warning'],
             "sequence gives correct warning"
         );
         $this->assertSame(
-            ['Avoid sequences'],
+            ['Avoid sequences.'],
             $feedback['suggestions'],
             "sequence gives correct suggestion"
         );

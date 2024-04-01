@@ -26,8 +26,8 @@ class Feedback
             return [
                 'warning'     => '',
                 'suggestions' => [
-                    "Use a few words, avoid common phrases",
-                    "No need for symbols, digits, or uppercase letters",
+                    "Use a few words, avoid common phrases.",
+                    "No need for symbols, digits, or uppercase letters.",
                 ],
             ];
         }
